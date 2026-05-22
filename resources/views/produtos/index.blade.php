@@ -26,11 +26,17 @@
     </form>
 
     <h2>Lista de Produtos</h2>
-    @if($produto->isEmpty())
-
+    @if($produtos->isEmpty())
+        <p>Nenhum Produto cadastrado</p>
     @else
-    
-    @endeif
+        <ul>
+            @foreach($produtos as $produto)
+                <li>
+                    {{$produto->nome}} - R$ {{number_format($produto->preco, 2, ',' , '.')}} - Estoque: {{$produto->estoque}}
+                </li>
+            @endforeach
+        </ul>
+    @endif
 
 
 </body>

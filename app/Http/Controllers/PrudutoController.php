@@ -19,9 +19,8 @@ class PrudutoController extends Controller
             'nome' => 'required|min:3',
             'preco' => 'required|numeric|min:0',
             'estoque' => 'required|integer|min:0',
-
         ]);
-
+        
         Produto::create($dados);
     
         return redirect('/produtos');

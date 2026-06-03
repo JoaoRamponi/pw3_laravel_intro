@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\livros;
 use Illuminate\Http\Request;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class livrosController extends Controller
 {

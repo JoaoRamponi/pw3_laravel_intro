@@ -1,12 +1,7 @@
 <?php
 
-use App\Http\Controllers\livrosController;
-use App\Models\livros;
+use App\Http\Controllers\OficinaController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome'); 
-});
-
-Route::get('/livros', [livrosController::class, 'index']);
-Route::post('/livros', [livrosController::class, 'store']);
+Route::get('/oficinas', [OficinaController::class, 'index']);
+Route::post('/oficinas', [OficinaController::class, 'store']);

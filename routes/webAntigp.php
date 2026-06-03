@@ -10,3 +10,6 @@ Route::get('/', function () {
 
 Route::get('/produtos', [PrudutoController::class, 'index']);
 Route::post('/produtos', [PrudutoController::class, 'store']);
+
+// Route::get('/livros', [livrosController::class, 'index']);
+// Route::post('/livros', [livrosController::class, 'store']);

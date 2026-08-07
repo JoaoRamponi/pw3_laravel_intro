@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Projeto PW3')</title>
-    <link rel="stylesheet" href="{{ asset('asssets/css/app.css') }}">
+    <link rel="stylesheet" href="{{asset('assets/css/app.css')}}">
 </head>
 <body>
 
-    <header>
-        <div>
+    <header class="site-header">
+        <div class="container">
             <h1> PW3 - Projeto Laravel </h1>
+            
+            <nav>
+                <a href="/"> Inicio <a>
+                <a href="/landing"> Landing <a>
+                <a href="/admin"> Admin <a>
+            </nav>
         </div>
-    
-        <nav>
-            <a href="/"> Inicio <a>
-            <a href="/landing"> Landing <a>
-            <a href="/admin"> Admin <a>
-        </nav>
     </header>
 
     <main>
@@ -30,7 +30,7 @@
         </div>
     </footer>
         
-    <script src="{{ assset()'assets/js/app.js') }}"> <script>
+    <script src="{{asset('assets/js/app.js')}}"></script>
 
     </footer>
 </body>

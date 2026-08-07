@@ -5,6 +5,10 @@ use App\Http\Controllers\livrosController;
 use App\Http\Controllers\PrudutoController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', function () {
+    return view('home');
+});
+
 Route::get('/oficinas', [OficinaController::class, 'index']);
 Route::post('/oficinas', [OficinaController::class, 'store']);
 

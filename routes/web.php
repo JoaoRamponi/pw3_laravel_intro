@@ -9,6 +9,8 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::view('/landing', 'landing');
+
 Route::get('/oficinas', [OficinaController::class, 'index']);
 Route::post('/oficinas', [OficinaController::class, 'store']);
 

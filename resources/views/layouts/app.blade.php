@@ -10,17 +10,16 @@
 
     <header class="site-header">
         <div class="container">
-            <h1> PW3 - Projeto Laravel </h1>
-            
+                <h1> PW3 - Projeto Laravel </h1>
             <nav>
-                <a href="/"> Inicio <a>
+                    <a href="/"> Inicio <a>
                 <a href="/landing"> Landing <a>
                 <a href="/admin"> Admin <a>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main class="container">
         @yield('content')
     </main>
         

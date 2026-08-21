@@ -10,6 +10,7 @@ Route::get('/', function () {
 });
 
 Route::view('/landing', 'landing');
+Route::view('/admin', 'admin.dashboard');
 
 Route::get('/oficinas', [OficinaController::class, 'index']);
 Route::post('/oficinas', [OficinaController::class, 'store']);

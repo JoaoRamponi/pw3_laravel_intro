@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use App\Http\Controllers\OficinaController;
 use App\Http\Controllers\livrosController;
 use App\Http\Controllers\PrudutoController;
@@ -11,6 +12,16 @@ Route::get('/', function () {
 
 Route::view('/landing', 'landing');
 Route::view('/admin', 'admin.dashboard');
+
+Route::get('/teste-orm', function () {
+    User::create([
+        'name' => 'João Ramponi',
+        'email' => 'joaoramponi6@escola.sp.gov.br',
+        'password' => '12345678'
+    ]);
+
+    return User::all();
+});
 
 Route::get('/oficinas', [OficinaController::class, 'index']);
 Route::post('/oficinas', [OficinaController::class, 'store']);

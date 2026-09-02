@@ -15,8 +15,8 @@ Route::view('/admin', 'admin.dashboard');
 
 Route::get('/teste-orm', function () {
     User::create([
-        'name' => 'João Ramponi',
-        'email' => 'joaoramponi6@escola.sp.gov.br',
+        'name' => 'João Victor',
+        'email' => 'joaoVictor@escola.sp.gov.br',
         'password' => '12345678'
     ]);
 

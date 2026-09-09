@@ -12,7 +12,8 @@ Route::get('/', function () {
 });
 
 Route::view('/landing', 'landing');
-Route::view('/admin', 'admin.dashboard');
+// Rota de listagem e painel admin (GET)
+Route::get('/admin', [UserController::class, 'index']);
 
 // Rota para carregar o fourmulario (GET)
 Route::get('/usuarios/novo', [UserController::class, 'create']);

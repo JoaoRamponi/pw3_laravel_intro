@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('titulo');
             $table->string('local');
-            $table->integer('quantidade_vagas');
-            $table->decimal('taxa_inscricao', 12, 4)->default(0.00);
+            $table->integer('vagas');
+            $table->decimal('preco_inscricao', 12, 4)->default(0.00);
             $table->timestamps();
         });
     }

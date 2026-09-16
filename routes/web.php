@@ -5,6 +5,8 @@ use App\Http\Controllers\OficinaController;
 use App\Http\Controllers\livrosController;
 use App\Http\Controllers\PrudutoController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventoController;
+
 
 Route::get('/', function () {
     return view('home');
@@ -22,6 +24,11 @@ Route::get('/teste-orm', function () {
 
     return User::all();
 });
+
+// Rotas da Agenda de Eventos
+Route::get('/eventos', [EventoController::class, 'index']);
+Route::get('/eventos/novo', [EventoController::class, 'create']);
+Route::post('/eventos', [EventoController::class, 'store']);
 
 Route::get('/oficinas', [OficinaController::class, 'index']);
 Route::post('/oficinas', [OficinaController::class, 'store']);

@@ -7,13 +7,19 @@ use App\Http\Controllers\PrudutoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventoController;
 
-
 Route::get('/', function () {
     return view('home');
 });
 
 Route::view('/landing', 'landing');
-Route::view('/admin', 'admin.dashboard');
+// Rota de listagem e painel admin (GET)
+Route::get('/admin', [UserController::class, 'index']);
+
+// Rota para carregar o fourmulario (GET)
+Route::get('/usuarios/novo', [UserController::class, 'create']);
+
+// Rota para salvar os dados enviado (POST)
+Route::post ('usuarios', [UserController::class, 'store']);
 
 Route::get('/teste-orm', function () {
     User::create([

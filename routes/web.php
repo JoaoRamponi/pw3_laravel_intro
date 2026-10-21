@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LivroController;
 use App\Http\Controllers\EventoController;
 use App\Models\User;
+use App\Http\Controller\CantinaController;
 
 Route::get('/', function () {
     return view('home');
@@ -43,3 +44,5 @@ Route::get('/teste-orm', function () {
 
     return User::all();
 });
+
+Route::resource('cantinas', CantinaController::class);
